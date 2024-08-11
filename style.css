@@ -1,0 +1,124 @@
+*{
+    /* border-box is important */
+    margin: 0;
+    padding: 0;
+    font-family: "poppins";
+    border: border-box;
+    font-weight: 300;
+}
+body{
+    background: linear-gradient(to bottom,#7af5c0,#ea90db);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    text-align: center;
+    font-family:"Grey Qo",sans-serif;
+    font-weight: 700;
+    font-size: 70px;
+    padding-right: 4%;
+}
+.card{
+    margin-top: 10%;
+    padding: 1%;
+    margin-right: auto;
+    margin-left: auto;
+    background: linear-gradient(to bottom,#03fcfc,#03a9fc);
+    border: 0;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+input{
+    flex-grow: 1;
+    border: 0;
+    outline: 0;
+    border-radius: 30px;
+    padding: 20px;
+    margin: 13px;
+}
+.search{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.searchbtn{
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 10px;
+    width: 12%;
+    height: 10%;
+    background-color: white;
+    margin: 13px;
+}
+.searchicon{
+    height: 30px;
+    width: 30px;
+    border-radius: 30%;
+    cursor: pointer;
+}
+.temp{
+    font-size: 60px;
+}
+.temp1{
+    font-size: 60px;
+}
+.humidity{
+    font-size: 35px;
+}
+.humidity1{
+    font-size: 35px;
+}
+.time{
+    font-size: 35px;
+}
+.div2{
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    /* flex-grow: 1; */
+}
+.div2-1{
+    margin-right: auto;
+    margin-left: auto; 
+}
+.div2-2{
+    margin-right: auto;
+    margin-left: auto; 
+}
+
+.change{
+    background: linear-gradient(to bottom,#03fcfc,#03a9fc);
+    border-radius: 50px;
+    border: 0;
+    cursor: pointer;
+}
+.p{
+    display: none;
+}
+
+.test1{
+    display: none;
+}
+.wind1{
+    display: none;
+}
+.farenheit{
+    font-size: 60px;
+}
+.farenheit1{
+    font-size: 60px;
+}
