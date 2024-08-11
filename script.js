@@ -1,75 +1,3 @@
-// window.addEventListener('load',function(){ 
-//     if(navigator.geolocation){
-//         navigator.geolocation.getCurrentPosition((position)=>{
-//             const time = document.getElementsByClassName(".time")
-//             const long = position.coords.longitude
-//             const lat = position.coords.latitude
-//             time.innerText = long;
-//             console.log(long,lat)
-//         })
-//     }
-// })
-
-
-
-//card bada karna hai 
-
-// const farenheit = document.querySelector('.farenheit')
-// const temp = document.querySelector('.temp')
-// const time = document.querySelector('.time')
-// const summary = document.querySelector('.summary')
-// // const icon = document.querySelector('.icon')
-// const Latitude = document.querySelector('.Latitude')
-// const imageicon = document.getElementById("cloudyIcon")
-// const button = document.getElementById('enter')
-
-// window.addEventListener('load',function(){ 
-//     if(navigator.geolocation){
-//         navigator.geolocation.getCurrentPosition((position)=>{
-//             const lati=position.coords.latitude
-//             const longi=position.coords.longitude
-//             Latitude.innerText = `${lati}, ${longi}`
-//                 fetch(`https://api.pirateweather.net/forecast/9jueRQl50vKLQiIRb6UTjTKmXf7x3G1i/${lati},${longi},1723282164?exclude=[excluded]&           units=uk&extend=[hourly]`)
-//                 .then(response => response.json())
-//                 .then((data) => {
-//                     // console.log(data.flags.units)
-//                     time.innerText = data.timezone;
-//                     temp.innerText = data.daily.data[0].temperatureMax;
-//                     summary.innerText = data.daily.summary;       
-//                     function window(){
-//                         if(summary.innerText === "Cloudy"){
-//                             cloudyIcon.src="cloud.png"
-//                         }else if(summary.innerText === "Clear"){
-//                             cloudyIcon.src="sunny.png"
-//                         }else if(summary.innerText === "Rain"){
-//                             cloudyIcon.src="rainy.png"
-//                         }
-//                     }
-//                     window();                
-//                     // button.addEventListener("click",function(){
-//                     //     fetch(`https://api.pirateweather.net/forecast/9jueRQl50vKLQiIRb6UTjTKmXf7x3G1i/${lati},${longi},1723282164?exclude=[excluded]&units=us&extend=[hourly]`)
-//                     //     .then(response => response.json())
-//                     //     .then((data) => {
-//                     //         time.innerText = data.timezone;
-//                     //         temp.innerText = data.daily.data[0].temperatureMax;
-//                     //         summary.innerText = data.daily.summary;
-//                     //     })
-//                         temp.addEventListener("click",function(){ 
-//                             if(temp.innerText < 300){  
-//                                 // console.log(temp.innerText)                
-//                                 farenheit.innerText = "°F"
-//                                 const farhan = (temp.innerText*2+30);
-//                                 temp.innerText = farhan
-//                                 // console.log(farhan);
-//                             }
-//                         })
-//                     })
-//                 .catch(err => console.error(err));
-//         })
-//     }
-// })
-
-
 let isShow = true;
 const test1=document.querySelector('.test1')
 const test2=document.querySelector('.test2')
@@ -102,7 +30,6 @@ const searchbtn = document.querySelector('.searchbtn')
          navigator.geolocation.getCurrentPosition(position=>{
             const latitude=position.coords.latitude
             const longitude=position.coords.longitude
-            // console.log(latitude,longitude)
             const options = {
                 method: 'GET',
                 headers: {
@@ -113,7 +40,6 @@ const searchbtn = document.querySelector('.searchbtn')
             fetch(`https://weatherapi-com.p.rapidapi.com/current.json?q=${latitude},${longitude}`, options)
             .then(response => response.json())
             .then(data => {               
-                // console.log(data.current.condition);
                 const {temp_c,temp_f,wind_kph,wind_mph} = data.current
                 const {localtime,name} = data.location
                 farenheit.innerText = temp_f;
@@ -133,7 +59,6 @@ const searchbtn = document.querySelector('.searchbtn')
 
 searchbtn.addEventListener("click",input=()=>{
     p.innerHTML = searchbar.value;
-    // console.log(p.innerHTML)
 
     const options = {
         	method: 'GET',
@@ -171,20 +96,7 @@ searchbtn.addEventListener("click",input=()=>{
                 }
                 imageChange();
                 })
-            //     let isShow = true;
-            //     button.addEventListener("click",function(){ 
-            //     if(isShow){                 
-            //         temp1.innerText = "°F"
-            //         const farhan = (temp.innerText*2+30);
-            //         temp.innerText = farhan
-            //         isShow = false
-            //     }else{
-            //         temp1.innerText = "°C"
-            //         const farhan1 = (temp.innerText/2-30);
-            //         temp.innerText = farhan1
-            //         isShow = true
-            //     }
-            // })
+
             .catch(err => console.error(err));
         });
         change.addEventListener("click",function(){ 
