@@ -89,7 +89,6 @@ input{
     justify-content: space-between;
     align-items: center;
     margin: 10px;
-    /* flex-grow: 1; */
 }
 .div2-1{
     margin-right: auto;
@@ -101,9 +100,6 @@ input{
 }
 
 .change{
-    background: linear-gradient(to bottom,#03fcfc,#03a9fc);
-    border-radius: 50px;
-    border: 0;
     cursor: pointer;
 }
 .p{
